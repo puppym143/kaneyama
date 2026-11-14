@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>かねやま暮らしプレビュー</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <h1>かねやま暮らしプレビュー</h1>
+        <p>あなたに合った金山町での暮らしを考えよう</p>
+    </header>
+
+    <main>
+        <h2>あなたについて教えてください</h2>
+
+        <form action="/" method="post">
+            <div class="question">
+                <h3>① 以前、金山町で暮らしていましたか？</h3>
+                <label>
+                    <input type="radio" name="residence"
+                           value="return" {{RESIDENCE_RETURN}}>
+                    はい（Uターン）
+                </label>
+                <label>
+                    <input type="radio" name="residence"
+                           value="new" {{RESIDENCE_NEW}}>
+                    いいえ（移住）
+                </label>
+            </div>
+
+            <div class="question">
+                <h3>② 希望する働き方は？</h3>
+                <label>
+                    <input type="radio" name="work"
+                           value="remote" {{WORK_REMOTE}}>
+                    リモートワーク
+                </label>
+                <label>
+                    <input type="radio" name="work"
+                           value="local" {{WORK_LOCAL}}>
+                    町内・周辺で仕事を探す
+                </label>
+            </div>
+
+            <div class="question">
+                <h3>③ 車はありますか？</h3>
+                <label>
+                    <input type="radio" name="car"
+                           value="yes" {{CAR_YES}}>
+                    あり
+                </label>
+                <label>
+                    <input type="radio" name="car"
+                           value="no" {{CAR_NO}}>
+                    なし
+                </label>
+            </div>
+
+            <div class="question">
+                <h3>④ 冬の暮らしに不安はありますか？</h3>
+                <label>
+                    <input type="checkbox" name="winter"
+                           {{WINTER_CHECKED}}>
+                    冬の生活が不安
+                </label>
+            </div>
+
+            <button type="submit">暮らしを見る</button>
+        </form>
+
+        {{RESULT}}
+    </main>
+
+    <footer>
+        <p>※表示する生活例は想定です。</p>
+    </footer>
+</body>
+</html>
